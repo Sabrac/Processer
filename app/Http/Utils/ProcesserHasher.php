@@ -11,8 +11,6 @@ namespace App\Http\Utils;
 
 class ProcesserHasher
 {
-    const MAX_INT = 2147483647;
-
     public function __construct()
     {
         $this->hex_chr = "0123456789abcdef";
