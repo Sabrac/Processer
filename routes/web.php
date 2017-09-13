@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'Guest\HomeController@index')->name('guestIndex');
+Route::get('/admin', 'Admin\DashboardController@index')->name('adminDashboard');

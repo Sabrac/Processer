@@ -20412,8 +20412,8 @@ fabric.Image.filters.BaseFilter = fabric.util.createClass(/** @lends fabric.Imag
    *   Select text vertically:         shift + up, shift + down
    *   Move cursor by word:            alt + left, alt + right
    *   Select words:                   shift + alt + left, shift + alt + right
-   *   Move cursor to line start/end:  cmd + left, cmd + right or home, end
-   *   Select till start/end of line:  cmd + shift + left, cmd + shift + right or shift + home, shift + end
+   *   Move cursor to line start/end:  cmd + left, cmd + right or dashboard, end
+   *   Select till start/end of line:  cmd + shift + left, cmd + shift + right or shift + dashboard, shift + end
    *   Jump to start/end of text:      cmd + up, cmd + down
    *   Select till start/end of text:  cmd + shift + up, cmd + shift + down or shift + pgUp, shift + pgDown
    *   Delete character:               backspace
