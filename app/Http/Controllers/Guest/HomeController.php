@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index() {
-        return view('guest.dashboard.index', [
+        return view('guest.home.index', [
             'projectList' => array()
         ]);
     }

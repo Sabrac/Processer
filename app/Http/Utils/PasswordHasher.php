@@ -9,7 +9,7 @@
 namespace App\Http\Utils;
 
 
-class ProcesserHasher
+class PasswordHasher
 {
     const MAX_INT = 2147483647;
 

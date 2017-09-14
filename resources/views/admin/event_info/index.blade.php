@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Dashboard')
+@section('title', 'Event Info')
 @section('contents')
     <div class="page-content">
         <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -113,7 +113,15 @@
             <ul class="page-breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="index.html">Home</a>
+                    <a href="{{ route('adminDashboard') }}">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="#">Info Management</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="{{ route('adminEventInfo') }}">Event Info</a>
                 </li>
             </ul>
             <div class="page-toolbar">
