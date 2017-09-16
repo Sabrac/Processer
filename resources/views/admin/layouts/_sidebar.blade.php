@@ -31,21 +31,21 @@
                 </form>
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
-            <li class="start">
+            <li class="start {{ UIHelper::checkMenuActive(['/']) }}">
                 <a href="/">
                     <i class="icon-home"></i>
                     <span class="title">Dashboard</span>
                     <span class="selected"></span>
                 </a>
             </li>
-            <li class="{{UIHelper::checkMenuActive(['news-category', 'news-category/*'])}}">
+            <li class="{{ UIHelper::checkMenuActive(['news-category', 'news-category/*']) }}">
                 <a href="#">
                     <i class="icon-settings"></i>
                     <span class="title">Web Config</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="{{UIHelper::checkMenuActive(['news-category', 'news-category/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['news-category', 'news-category/*']) }}">
                         <a href="{{ route('adminNewsCategory') }}">
                             <i class="icon-layers"></i>
                             <span class="title">News Category</span>
@@ -53,20 +53,20 @@
                     </li>
                 </ul>
             </li>
-            <li class="{{UIHelper::checkMenuActive(['web-users', 'web-users/*', 'game-users', 'game-users/*'])}}">
+            <li class="{{ UIHelper::checkMenuActive(['web-users', 'web-users/*', 'game-users', 'game-users/*']) }}">
                 <a href="#">
                     <i class="icon-users"></i>
                     <span class="title">Users Management</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="{{UIHelper::checkMenuActive(['web-users', 'web-users/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['web-users', 'web-users/*']) }}">
                         <a href="{{ route('adminWebUsers') }}">
                             <i class="icon-user"></i>
                             <span class="title">Web Users</span>
                         </a>
                     </li>
-                    <li class="{{UIHelper::checkMenuActive(['game-users', 'game-users/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['game-users', 'game-users/*']) }}">
                         <a href="{{ route('adminGameUsers') }}">
                             <i class="icon-game-controller"></i>
                             <span class="title">Game Users</span>
@@ -74,32 +74,32 @@
                     </li>
                 </ul>
             </li>
-            <li class="{{UIHelper::checkMenuActive(['news-info', 'news-info/*', 'event-info', 'event-info/*', 'game-info', 'game-info/*', 'images', 'images/*'])}}">
+            <li class="{{ UIHelper::checkMenuActive(['news-info', 'news-info/*', 'event-info', 'event-info/*', 'game-info', 'game-info/*', 'images', 'images/*']) }}">
                 <a href="#">
                     <i class="icon-info"></i>
                     <span class="title">Info Management</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="{{UIHelper::checkMenuActive(['news-info', 'news-info/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['news-info', 'news-info/*']) }}">
                         <a href="{{ route('adminNewsInfo') }}">
                             <i class="icon-list"></i>
                             <span class="title">News Info</span>
                         </a>
                     </li>
-                    <li class="{{UIHelper::checkMenuActive(['event-info', 'event-info/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['event-info', 'event-info/*']) }}">
                         <a href="{{ route('adminEventInfo') }}">
                             <i class="icon-calendar"></i>
                             <span class="title">Event Info</span>
                         </a>
                     </li>
-                    <li class="{{UIHelper::checkMenuActive(['game-info', 'game-info/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['game-info', 'game-info/*']) }}">
                         <a href="{{ route('adminGameInfo') }}">
                             <i class="icon-book-open"></i>
                             <span class="title">Game Info</span>
                         </a>
                     </li>
-                    <li class="{{UIHelper::checkMenuActive(['images', 'images/*'])}}">
+                    <li class="{{ UIHelper::checkMenuActive(['images', 'images/*']) }}">
                         <a href="{{ route('adminImages') }}">
                             <i class="icon-picture"></i>
                             <span class="title">Images</span>
@@ -107,13 +107,13 @@
                     </li>
                 </ul>
             </li>
-            <li class="{{UIHelper::checkMenuActive(['feedback', 'feedback/*'])}}">
+            <li class="{{ UIHelper::checkMenuActive(['feedback', 'feedback/*']) }}">
                 <a href="{{ route('adminFeedback') }}">
                     <i class="icon-speech"></i>
                     <span class="title">Feedback</span>
                 </a>
             </li>
-            <li class="{{UIHelper::checkMenuActive(['recharge', 'recharge/*'])}}">
+            <li class="{{ UIHelper::checkMenuActive(['recharge', 'recharge/*']) }}">
                 <a href="{{ route('adminRecharge') }}">
                     <i class="icon-wallet"></i>
                     <span class="title">Recharge</span>

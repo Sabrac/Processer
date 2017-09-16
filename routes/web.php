@@ -15,6 +15,8 @@ $domainName = env('APP_DOMAIN_NAME');
 $domain = env('APP_DOMAIN');
 $adminDomain = $domainName . 'admin.' . $domain;
 
+App::setLocale('en');
+
 Route::group(['domain' => $adminDomain], function () {
 
     // Login action

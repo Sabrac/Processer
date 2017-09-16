@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('title', 'News Category')
 @section('contents')
-    <div class="page-content">
+    <div class="page-content" style="display: none" data-bind="visible: true">
         <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
         <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -149,15 +149,69 @@
             </div>
         </div>
         <h3 class="page-title">
-            Blank Page <small>blank page</small>
+            @lang('news_category.title') <small>@lang('news_category.title_description')</small>
         </h3>
         <!-- END PAGE HEADER-->
         <!-- BEGIN PAGE CONTENT-->
         <div class="row">
             <div class="col-md-12">
-                Page content goes here
+                <!-- BEGIN SAMPLE TABLE PORTLET-->
+                <div class="portlet">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            @lang('news_category.table_name')
+                        </div>
+                        <!--
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse">
+                            </a>
+                            <a href="#portlet-config" data-toggle="modal" class="config">
+                            </a>
+                            <a href="javascript:;" class="reload">
+                            </a>
+                            <a href="javascript:;" class="remove">
+                            </a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="portlet-body">
+                        <div data-bind="visible: lsCategory().length <= 0">
+                            <span class="caption-subject font-green-sharp bold uppercase">No Category Found</span>
+                        </div>
+                        <div class="table-scrollable" data-bind="visible: lsCategory().length > 0">
+                            <table class="table table-striped table-bordered table-advance table-hover">
+                                <thead>
+                                <tr>
+                                    <th>ID </th>
+                                    <th>Category Name </th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody data-bind="foreach: lsCategory">
+                                    <tr>
+                                        <td data-bind="text: cateId"></td>
+                                        <td data-bind="text: cateName"></td>
+                                        <td>
+                                            <a href="javascript:;" class="btn default btn-xs purple">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </a>
+                                            <a href="javascript:;" class="btn default btn-xs black">
+                                                <i class="fa fa-trash-o"></i> Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SAMPLE TABLE PORTLET-->
             </div>
         </div>
         <!-- END PAGE CONTENT-->
     </div>
+@endsection
+
+@section('js')
+    <script src="{{ asset('assets/admin/scripts/news-category/index.js') }}" type="text/javascript"></script>
 @endsection
